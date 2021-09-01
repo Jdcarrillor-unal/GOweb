@@ -1,0 +1,326 @@
+{{ define "application/index" }}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title>Invernaderos en casa</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <!-- FONT-AWSOME -->
+    <script src="https://kit.fontawesome.com/52a6ecb4ae.js" crossorigin="anonymous"></script>
+
+    <body>
+
+        <!-- Barra de Navegación -->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark fondo-nav  clearfix" id="menu-nav">
+            <div class="container my-1">
+                <a class="navbar-brand" href="index.html">
+                    <img id="logo" class="img-fluid" src="" alt="logotipo">
+                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  " id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link " href="#Nosotros">  Nosotros</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#servicios"> Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#Contacto"> Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/users/login"> Iniciar Sesion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Imagen cabecera - jumbotron  -->
+        <section id="inicio" class="text-center clearfix">
+            <div class="jumbotron fondo-imagen pb-5">
+                <h4> Siempre con tigo </h4> <strong> Invernaderos en Casa  </strong>
+                <p class="lead"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore? </p>
+            </div>
+        </section>
+        <section id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-4">
+                        <h2 class="mt-5 ">Descripción del Proyecto </h2>
+                        <p class="mt-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sint eos soluta iure labore itaque perferendis minus quasi numquam consectetur omnis sequi aliquam at. Harum facere iste quisquam aut eius provident veritatis mollitia
+                            sapiente quidem veniam. Laborum sequi suscipit consectetur vel molestiae perferendis temporibus! Illum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sint eos soluta iure labore itaque perferendis minus quasi
+                            numquam consectetur omnis sequi aliquam at. Harum facere iste quisquam aut eius provident veritatis mollitia sapiente quidem veniam. Laborum sequi suscipit consectetur vel molestiae perferendis temporibus! Illum!Lorem ipsum
+
+
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <img class="img-thumbnail img-fluid" src="/assets/img/estacion.png" alt="Estacion metereológica">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="Nosotros">
+            <div class="container mb-4">
+                <div class="row">
+                    <!-- Imagenes  -->
+                    <div class="col-sm-12 col-md-6 m-auto">
+                        <!-- <div class="row"> -->
+                        <!-- <div class="col-sm-8 "> -->
+                        <!-- carrusel de imagenes  con indicadores-->
+                        <div id="slider2" class="carousel slide ">
+                            <ol class="carousel-indicators">
+                                <li class="active" data-target="#slider2" data-slide-to="0"></li>
+                                <li class="" data-target="#slider2" data-slide-to="1"></li>
+                                <li class="" data-target="#slider2" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active ">
+                                    <img class="d-block img-fluid" src="/assets/img/Imagen3.jpg" alt="Primer slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h2>Hola Mundo</h2>
+                                        <p>Lorem, ipsum dolor.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                    <img class="d-block img-fluid" src="/assets/img/imagen1.jpg" alt="Segundo slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h2>Hola Mundo</h2>
+                                        <p>Lorem, ipsum dolor.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block img-fluid" src="/assets/img/fresa.jpg" alt="Tercer slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h2>Hola Mundo</h2>
+                                        <p>Lorem, ipsum dolor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controles -->
+                            <a href="#slider2" class="carousel-control-prev" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a href="#slider2" class="carousel-control-next" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <h2>Nosotros</h2>
+                        <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime ut suscipit vitae officia impedit nesciunt nemo quidem ipsum fugiat! Repellat, ducimus iusto alias repellendus saepe quidem voluptatibus eos laudantium
+                            praesentium! Sunt molestias, aliquid rem distinctio facere quaerat a vitae numquam ad quis voluptatem doloremque aut sequi? Laudantium eligendi maxime harum sunt veniam quidem, perferendis et asperiores! Odio facilis repudiandae
+                            eligendi omnis officia maxime quo necessitatibus aut. Ducimus dignissimos porro qui, odio quam beatae, libero id deleniti sint assumenda ratione, dolorem est voluptates officia! Eveniet expedita dolorem, totam voluptas sint
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Mision</h2>
+                <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime ut suscipit vitae officia impedit nesciunt nemo quidem ipsum fugiat! Repellat, ducimus iusto alias repellendus saepe quidem voluptatibus eos laudantium praesentium!
+                    Sunt molestias, aliquid rem distinctio facere quaerat a vitae numquam ad quis voluptatem doloremque aut sequi? Laudantium eligendi maxime harum sunt veniam quidem, perferendis et asperiores! Odio facilis repudiandae eligendi omnis
+                </p>
+            </div>
+        </section>
+        <!-- Servicios -->
+        <section id="servicios">
+            <div class="container">
+                <h1 class="text-center mt-5">Nuestros Servicios</h1>
+                <div class="row mt-5 m-4">
+                    <div class="col-sm-12 col-md-4 text-center">
+                        <h2 class="mt-5 "> <i class="fas fa-database"></i> <br> Big Data</h2>
+                        <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, amet, consectetur laboriosam minima reiciendis, doloremque facilis sunt quia voluptatum adipisci velit iure corrupti eaque perferendis eius quas error dicta earum nam
+                            nihil!
+                        </p>
+                        <br>
+                        <button class="btn-lg btn-primary text-center mb-5 ">Ver mas <i class="fas fa-arrow-circle-right"></i></button>
+                    </div>
+                    <div class="col-sm-12 col-md-4 text-center">
+                        <h2 class="mt-5 "> <i class="fas fa-money-check"></i><br> Suscripcion</h2>
+                        <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, amet, consectetur laboriosam minima reiciendis, doloremque facilis sunt quia voluptatum adipisci velit iure corrupti eaque perferendis eius quas error dicta earum nam
+                            nihil!
+                        </p>
+                        <br>
+                        <button class="btn-lg btn-primary text-center mb-5 ">Ver mas <i class="fas fa-arrow-circle-right"></i></button>
+                    </div>
+                    <div class="col-sm-12 col-md-4 text-center">
+                        <h2 class="mt-5 "> <i class="fas fa-cloud-rain"></i> <br> Invernaderos en Casa </h2>
+                        <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, amet, consecm nihil! Lorem ipsum dolor sit amet
+                        </p>
+                        <br>
+                        <button class="btn-lg btn-primary text-center mb-5 ">Ver mas <i class="fas fa-arrow-circle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Precios  -->
+        <section class="container">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="text-center mt-5">Precios</h1>
+                <p class="fs-5 text-muted">Accede a los datos de tu cultivo de manera rapida </p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Free</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$<small class="text-muted fw-light">/COP</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Uso limitado de la Api</li>
+                                <li>Acceso parcial de los datos</li>
+                                <li>Soporte via email </li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">3-Meses</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$<small class="text-muted fw-light">/COP</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Uso ilimitado de la Api</li>
+                                <li>Instalación de un Invernadero en Casa </li>
+                                <li>Prioridad de sporte telefonico </li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Anual</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$<small class="text-muted fw-light">/COP</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li class="">Uso ilimitado de la Api</li>
+                                <li>Instalación de un Invernadero en tu casa </li>
+                                <li>Prioridad de sporte telefonico </li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="display-6 text-center mt-5 mb-5">Comparando las Suscripciones</h2>
+
+            <div class="table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th style="width: 34%;"></th>
+                            <th style="width: 22%;">Free</th>
+                            <th style="width: 22%;">3-Meses</th>
+                            <th style="width: 22%;">Anual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Peticiones a la APi</th>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Soporte 24h</th>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start"> Invernaderos </th>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start"> Uso ilimitado de la APi </th>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start"> Descuento </th>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pie de Pagina y Contacto -->
+        <footer>
+            <section id="Contacto">
+                <div class="container mt-5 p-2">
+                    <div class=" m-5 text-white text-center">
+                        <h3 class="mt-5"> Contactanos </h3>
+                        <p class="mt-5">
+                            <i class="fas fa-map-marker-alt"></i> Calle 52 #21-21 Bogota/Colombia
+                            <br>
+                            <i class="fas fa-phone"></i> 57 312423093
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+        <!-- JQuery -->
+        <script type="text/javascritp" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Popper.js -->
+        <script src="/assets/js/popper.min.js"></script>
+        <!-- Booststrap -->
+        <script src="/assets/js/bootstrap.min.js"></script>
+
+        <script>
+            // Iniciar scroolspy
+            $('body').scrollspy({
+                target: '#menu-nav'
+            });
+            // Scroll suavizado
+            $('#menu-nav a').on('click', function(event) {
+                if (this.hash != "") {
+                    event.preventDefault();
+                    const hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    })
+                }
+            })
+        </script>
+    </body>
+
+</html>
+{{ end }}

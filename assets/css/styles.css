@@ -1,0 +1,136 @@
+    /** GLobales**/
+    
+    html {
+        box-sizing: border-box;
+        font-size: 70.5%;
+        /**Reset para REMS - 62.5% = 10px de 16 px**/
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    body {
+        font-family: "Lato", sans-serif;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    
+    h1 {
+        font-size: 3.8rem;
+    }
+    
+    h2 {
+        font-size: 3.4rem;
+    }
+    
+    h3 {
+        font-size: 3rem;
+    }
+    
+    h4 {
+        font-size: 2.6rem;
+    }
+    
+    h5 {
+        font-size: 2.2rem;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .contenedor {
+        max-width: 120rem;
+        margin: auto;
+    }
+    /** Utilidades **/
+    
+    .darespacio {
+        padding: 1rem;
+    }
+    
+    .section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    
+    .fw-300 {
+        font-weight: 300;
+    }
+    
+    .centrar-texto {
+        text-align: center;
+    }
+    
+    .d-block {
+        display: block !important;
+    }
+    
+    .contenido-centrado {
+        max-width: 80rem;
+    }
+    /* Estilos personalizados */
+    /* .fondo-nav {
+        background: gris !important
+    }
+     */
+    
+    #inicio {
+        background: url(../img/Fresa-cosecha.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .jumbotron {
+        width: 100%;
+        height: 70rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding-top: 40rem;
+    }
+    
+    footer {
+        background: #13151d;
+    }
+    
+    #logo {
+        width: 20%;
+        height: 20%;
+    }
+    
+    .form-signin {
+        width: 100%;
+        max-width: 30rem;
+        padding: 15px;
+        margin: auto;
+    }
+    
+    .form-signin .checkbox {
+        font-weight: 400;
+    }
+    
+    .form-signin .form-floating:focus-within {
+        z-index: 2;
+    }
+    
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    /* precios  */
+    
+    .pricing-header {
+        max-width: 70rem;
+    }
+    /* dashboard */

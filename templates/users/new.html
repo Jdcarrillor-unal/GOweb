@@ -1,0 +1,77 @@
+{{ define "users/new" }}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <title>Registro</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Invernaderos en Casa </a>
+            </div>
+        </div>
+    </nav>
+
+    {{ if .Error }}
+    <div class="alert alert-danger">
+        <strong> {{ .Error }} </strong>
+    </div>
+    {{ end }} {{ if .Exito }}
+    <div class="alert alert-success">
+        <strong> {{ .Exito }} </strong>
+    </div>
+    {{ end }}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <form class="form-horizontal" method="POST" action="#">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="username">Username:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="username" placeholder="Ingrese username" name="username">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Ingrese email" name="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="password">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="Ingrese password" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10 mx-auto">
+                            <button type="submit" class="btn btn-default">Registro</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <a href="/users/login">Tengo una cuenta</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+{{ end }}
