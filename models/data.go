@@ -39,7 +39,7 @@ func GetData(sql string, conditional interface{}) *Data {
 	return data
 }
 func GetDatos(sql string) (Datos, error) {
-	datos := Datos{}
+	var datos Datos
 	rows, error := Query(sql)
 	if error != nil {
 		panic(error)
@@ -64,9 +64,9 @@ func GetDatos2(sql string, conditional interface{}) (Datos, error) {
 	}
 	return datos, error
 }
-func GetlastDataByUserID(id int64) *Data {
+func GetlastDataByUserID(id int64) (Datos, error) {
 	sql := "SELECT ID,temperatura,humedad,led1,pwm,fecha_hora  FROM DATA WHERE user_id =?  ORDER BY id DESC  LIMIT 1"
-	return GetData(sql, id)
+	return GetDatos2(sql, id)
 }
 func GetDataBydate(inicio string, fin string) (Datos, error) {
 

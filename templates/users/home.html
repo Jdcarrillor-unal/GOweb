@@ -41,21 +41,24 @@
     </div>
     {{ end }}
 
-
+    <h2 class="center"> Busqueda por fecha </h2>
     <div class="container ">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <form class="form-inline " role="form" method="GET" action="/api/v2/datos/">
-                <label for="date_init"> Fecha de inicio "formato Año-Mes-Dia Hora:Min:Seg"</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Fecha de inicio" name="inicio">
+            <form class="form-horizontal" role="form " method="POST" action="#">
+                <label for="day_init "> Dia inicial  </label>
+                <input type="text " class="form-control form-control-lg " placeholder="Dia inicial" name="dia_init">
+                <label for="houre_init "> Hora inicio   </label>
+                <input type="text " class="form-control form-control-lg " placeholder="Hora inicial" name="hora_init">
 
-                <label for="date_fin">Fecha de Fin </label>
-                <input type="text" class="form-control form-control-lg" placeholder="Fecha de finalizacion" name="fin">
-
+                <label for="day ">Dia  de Fin </label>
+                <input type="text " class="form-control form-control-lg " placeholder="Fecha de finalizacion" name="dia_fin">
+                <label for="houre ">Hora de Fin </label>
+                <input type="text " class="form-control form-control-lg " placeholder="Fecha de finalizacion" name="hora_fin">
 
                 <!--boton-->
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-dark">Pedir</button>
+                <div class="form-group ">
+                    <div class="col-sm-offset-2 col-sm-10 ">
+                        <button type="submit " class="btn btn-dark ">Pedir</button>
                     </div>
                 </div>
         </div>
@@ -63,8 +66,8 @@
 
     </div>
 
-    <div class="container">
-        <table class="table table-dark">
+    <div class="container ">
+        <table class="table table-dark ">
             <thead>
                 <tr>
                     <th>Fecha-Hora</th>
@@ -74,16 +77,18 @@
                     <th>Boton</th>
                 </tr>
             </thead>
+            {{ range .Data }}
             <tbody>
 
                 <tr>
-                    <td> {{ .Data.Fecha_hora }} </td>
-                    <td> {{ .Data.Temperatura }} </td>
-                    <td> {{ .Data.Humedad }}</td>
-                    <td> {{ .Data.Pwm }}</td>
-                    <td> {{ .Data.Led1 }}</td>
+                    <td> {{ .Fecha_hora }} </td>
+                    <td> {{ .Temperatura }} </td>
+                    <td> {{ .Humedad }}</td>
+                    <td> {{ .Pwm }}</td>
+                    <td> {{ .Led1 }}</td>
                 </tr>
             </tbody>
+            {{ end }}
         </table>
     </div>
 

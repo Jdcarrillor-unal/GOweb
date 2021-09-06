@@ -20,7 +20,7 @@ func NewUser(w http.ResponseWriter, r *http.Request) {
 		} else {
 			utils.SetSession(user, w)
 			context["Exito"] = "Creado correctamente "
-			http.Redirect(w, r, "/users/login", http.StatusSeeOther)
+			http.Redirect(w, r, "/users/home", http.StatusSeeOther)
 		}
 		fmt.Println(username)
 		fmt.Println(email)
@@ -58,33 +58,38 @@ func EditUser(w http.ResponseWriter, r *http.Request) {
 }
 func Home(w http.ResponseWriter, r *http.Request) {
 	context := make(map[string]interface{})
-	fmt.Println(r.Method)
-	user := utils.GetUser(r)
-	data := models.GetlastDataByUserID(user.Id)
-	context["Data"] = data
-	context["User"] = user
-	fmt.Println(context)
-	fmt.Println(user)
-	fmt.Println(data)
+	if r.Method == "GET" {
+		fmt.Println(r.Method)
+		user := utils.GetUser(r)
+		data, _ := models.GetlastDataByUserID(user.Id)
+		context["Data"] = data
+		context["User"] = user
+		fmt.Println("context:", context)
+		fmt.Println("user: ", user)
+		fmt.Println("data", data)
+		utils.RenderTemplate(w, "users/home", context)
+	}
 	// fmt.Println(data.Fecha_hora)
 	// fmt.Println(data.Temperatura)
 	// fmt.Println(data.Humedad)
 	// fmt.Println(data.Led1)
 
-	// if r.Method == "POST" {
-	// 	context2 := make(map[int]interface{})
-	// 	begin := r.FormValue("inicio")
-	// 	end := r.FormValue("fin")
-	// 	if Datos, err := models.GetDataBydate(begin, end); err != nil {
-	// 		fmt.Println(err)
-	// 	} else {
-	// 		for index, data := range Datos {
-	// 			context2[index] = data
-	// 		}
-	// 		fmt.Println(Datos)
-	// 		utils.RenderTemplate(w, "users/home", context2)
-	// 	}
-	// }
+	if r.Method == "POST" {
 
-	utils.RenderTemplate(w, "users/home", context)
+		init_day := r.FormValue("dia_init")
+		init_houre := r.FormValue("hora_init")
+		end_day := r.FormValue("dia_fin")
+		end_houre := r.FormValue("hora_fin")
+		begin := init_day + " " + init_houre
+		end := end_day + " " + end_houre
+		fmt.Println(begin, end)
+		if datos, err := models.GetDataBydate(begin, end); err != nil {
+			fmt.Println(err)
+		} else {
+			context["Data"] = datos
+			fmt.Println(datos)
+			utils.RenderTemplate(w, "users/home", context)
+		}
+	}
+
 }
